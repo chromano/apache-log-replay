@@ -28,6 +28,7 @@ def main(host, filename):
             if time_delta.seconds > 10:
                 print "(next request in %d seconds)" % time_delta.seconds
             time.sleep(time_delta.seconds)
+        last_time = request_time
         url = host + path
         try:
             req_result = "OK"
